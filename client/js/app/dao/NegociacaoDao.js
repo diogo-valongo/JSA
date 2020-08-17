@@ -13,7 +13,7 @@ class NegociacaoDao {
             let request = this._connection
                 .transaction([this._store], 'readwrite')
                 .objectStore(this._store)
-                .add(negociacao, 'jubileu');
+                .add(negociacao, 'jubileu'); //aqui está a key... se ela for removida acontece o Erro
 
             request.onsuccess = e => {
 
